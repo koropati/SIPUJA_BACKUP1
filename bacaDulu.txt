@@ -1,0 +1,30 @@
+folder sdk/platform-tools
+adb device
+adb reverse tcp:8081 tcp:8081
+
+di folder project
+react-native run-android
+
+di folder /android
+gradlew clean
+
+=========================================================
+RUN ON CMD/CONSOLE
+=========================================================
+
+
+npm install react-native-material-dropdown
+npm install react-native-picker-dropdown
+npm install react-native-datepicker
+npm install react-native-vector-icons
+npm install native-base
+npm install react-navigation
+npm install md5
+react-native link
+
+
+Fix for icon not displaying :
+=========================================================
+react-native link react-native-vector-icons
+=========================================================
+

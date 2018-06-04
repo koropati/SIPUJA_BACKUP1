@@ -1,0 +1,43 @@
+import React, { Component } from 'react';
+import {
+    View,
+    Text,
+    StyleSheet,
+} from 'react-native';
+
+import { StackNavigator } from 'react-navigation';
+import Home from './components/Home/Home';
+import inputPinjam from './components/Home/inputPinjam'
+import inputBuku from './components/Home/inputBuku'
+import cariBuku from './components/Home/cariBuku'
+import tambahAnggota from './components/Home/tambahAnggota'
+import inputKembali from './components/Home/inputKembali'
+import dataBuku from './components/Home/dataBuku'
+import dataPinjam from './components/Home/dataPinjam'
+import dataAnggota from './components/Home/dataAnggota'
+
+const ruteHomenya = StackNavigator({
+    Home: { screen: Home },
+    inputPinjam : { screen: inputPinjam},
+    inputBuku : { screen: inputBuku},
+    cariBuku : { screen: cariBuku},
+    tambahAnggota : { screen: tambahAnggota},
+    inputKembali : { screen: inputKembali},
+    dataBuku : { screen: dataBuku},
+    dataPinjam : { screen: dataPinjam},
+    dataAnggota : { screen: dataAnggota},
+}, {
+        navigationOptions: {
+            
+        }
+    }
+
+);
+
+export default class ruteHome extends React.Component {
+    render(){
+        return(
+            <ruteHomenya/>
+        );
+    }
+}
